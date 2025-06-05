@@ -1,0 +1,88 @@
+<%- include('partials/header') %>
+
+<!-- Sección Historia de Pintitas -->
+<section id="sobreNosotros" class="container mb-5">
+  <h3 class="tituloSobreNosotros">Sobre Nosotros</h3>
+  <p class="historiaPintitas">
+    Pintitas nació en el año 2024 con un sueño simple pero poderoso: vestir a los más pequeños con ropa que combine comodidad, estilo y calidad. Inspirada en la alegría, la ternura y la imaginación de la infancia, la marca fue fundada por Laura Cecilia Esplugas en Buenos Aires, con la firme convicción de que la ropa para niños debía ser tan especial como quienes la usan.
+    <br><br>
+    Desde sus comienzos, Pintitas se enfocó en crear prendas que respeten la piel sensible de los niños, utilizando telas suaves, resistentes y procesos responsables con el medio ambiente. Cada diseño busca acompañar los movimientos naturales de la niñez: jugar, explorar, correr y descubrir el mundo con libertad.
+    <br><br>
+    Más que una marca, Pintitas es una familia que acompaña a la tuya.
+  </p>
+</section>
+
+<!-- Sección Productos en Oferta -->
+<section id="productos" class="container mb-5">
+  <h3 class="mb-4">Productos</h3>
+  <div class="row row-cols-1 row-cols-md-3 g-4">
+    <% productos.forEach(producto => { %>
+      <div class="col">
+        <div class="card h-100">
+          <img src="/<%= producto.imagen %>" class="card-img-top" alt="<%= producto.nombre %>">
+          <div class="card-body">
+            <h5 class="card-title"><%= producto.nombre %></h5>
+            <p class="card-text"><%= producto.descripcion %></p>
+            <p class="fw-bold">$<%= producto.precio %></p>
+            <a href="/productos/<%= producto.id %>/editar" class="btn btn-warning">Editar</a>
+            <form action="/productos/<%= producto.id %>/eliminar" method="POST" class="d-inline">
+              <button class="btn btn-danger" onclick="return confirm('¿Eliminar producto?')">Eliminar</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    <% }) %>
+  </div>
+  <div class="text-center mt-4">
+    <a href="/productos/nuevo" class="btn btn-success">Agregar Producto</a>
+  </div>
+</section>
+
+<!-- Sección Colección de Invierno -->
+<section id="colecciondeinvierno" class="container mb-5">
+  <h3 class="mb-4"></h3>
+  <div class="row row-cols-1 row-cols-md-3 g-4">
+    <% productos
+      .filter(p => p.coleccion === 'invierno') // Asegurate de tener esta propiedad en el JSON
+      .forEach(producto => { %>
+      <div class="col">
+        <div class="card h-100">
+          <img src="/<%= producto.imagen %>" class="card-img-top" alt="<%= producto.nombre %>">
+          <div class="card-body">
+            <h5 class="card-title"><%= producto.nombre %></h5>
+            <p class="card-text"><%= producto.descripcion %></p>
+            <p class="fw-bold">$<%= producto.precio %></p>
+            <a href="/productos/<%= producto.id %>/editar" class="btn btn-warning">Editar</a>
+            <form action="/productos/<%= producto.id %>/eliminar" method="POST" class="d-inline">
+              <button class="btn btn-danger" onclick="return confirm('¿Eliminar producto?')">Eliminar</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    <% }) %>
+  </div>
+</section>
+
+<!-- Sección Contacto -->
+<section id="contacto" class="bg-light py-5">
+  <div class="container">
+    <h2 class="text-center mb-4">Contacto</h2>
+    <form>
+      <div class="mb-3">
+        <label for="nombre" class="form-label">Nombre</label>
+        <input type="text" class="form-control" id="nombre" placeholder="Tu nombre">
+      </div>
+      <div class="mb-3">
+        <label for="correo" class="form-label">Correo electrónico</label>
+        <input type="email" class="form-control" id="correo" placeholder="Tu correo">
+      </div>
+      <div class="mb-3">
+        <label for="mensaje" class="form-label">Mensaje</label>
+        <textarea class="form-control" id="mensaje" rows="4" placeholder="Escribí tu mensaje..."></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary">Enviar</button>
+    </form>
+  </div>
+</section>
+
+<%- include('partials/footer') %>

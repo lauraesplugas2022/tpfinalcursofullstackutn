@@ -1,0 +1,12 @@
+<%- include('partials/header') %>
+
+<h1>Nuevo Producto</h1>
+<form action="/productos" method="POST">
+  <input name="nombre" class="form-control mb-2" placeholder="Nombre" required>
+  <textarea name="descripcion" class="form-control mb-2" placeholder="Descripción" required></textarea>
+  <input name="precio" type="number" step="0.01" class="form-control mb-2" placeholder="Precio" required>
+  <input name="imagen" class="form-control mb-2" placeholder="Ruta imagen (ej: img/imagen10.jpg)" required>
+  <button class="btn btn-primary">Guardar</button>
+</form>
+
+<%- include('partials/footer') %>

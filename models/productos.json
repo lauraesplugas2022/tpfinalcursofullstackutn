@@ -1,0 +1,66 @@
+
+[
+  {
+    "id": 1,
+    "nombre": "Saco y Jean",
+    "descripcion": "Saco gris y jean azul",
+    "precio": 12000,
+    "imagen": "img/imagen1invierno.jpg"
+  },
+  {
+    "id": 2,
+    "nombre": "Campera y Jean",
+    "descripcion": "Campera marrón y jean claro",
+    "precio": 18000,
+    "imagen": "img/imagen2invierno.jpg"
+  },
+  {
+    "id": 3,
+    "nombre": "Campera",
+    "descripcion": "Campera cuadrillé marrón",
+    "precio": 10000,
+    "imagen": "img/imagen3invierno.jpg"
+  },
+   {
+    "id": 4,
+    "nombre": "Pulover y jardinero y pulover con pantalón",
+    "descripcion": "Las 4 prendas son color naranja y hacen juego",
+    "precio": 20000,
+    "imagen": "img/imagen2main.jpg"
+  },
+  {
+    "id": 5,
+    "nombre": "Vestido y Campera",
+    "descripcion": "Vestido largo color beige y campera de jean color celeste",
+    "precio": 10000,
+    "imagen": "img/imagen3main.jpg"
+  },
+  {
+    "id": 6,
+    "nombre": "Vestido verde",
+    "descripcion": "Vestido color verde con volados y puntillas",
+    "precio": 7000,
+    "imagen": "img/imagen4main.jpg"
+  },
+   {
+    "id": 7,
+    "nombre": "Vestido rosa",
+    "descripcion": "Vestido rosa con moño y volados",
+    "precio": 5000,
+    "imagen": "img/imagen5main.jpeg"
+  },
+  {
+    "id": 8,
+    "nombre": "Vestido y remera",
+    "descripcion": "Vestido marrón y remera de manga larga beige",
+    "precio": 5000,
+    "imagen": "img/imagen6main.jpg"
+  },
+  {
+    "id": 9,
+    "nombre": "Vestido estampado",
+    "descripcion": "Vestido estampado color beige con moño y sombrero",
+    "precio": 8500,
+    "imagen": "img/imagen7main.jpg"
+  }
+]
